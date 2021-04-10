@@ -100,6 +100,7 @@ while True:
             header +='Transfer-Encoding: chunked\n\n'
             connector.send(header.encode('utf-8'))
             file = open(filename,'rb') 
+            #download file in chunks
             CHUNK_SIZE = 1024
             chunk = file.read(CHUNK_SIZE)
             while chunk:
